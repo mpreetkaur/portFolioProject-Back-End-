@@ -1,0 +1,630 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- IE Compatibility meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Description meta -->
+    <meta name="description" content="...">
+    <!-- Author meta -->
+    <meta name="author" content="Bootstrap Temple">
+
+    <!-- Page Title -->
+    <title>Manpreet Kaur</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/img/favicon.ico">
+
+    <!-- Bootstrap -->
+    @*<link rel="stylesheet" href="css/bootstrap.min.css">*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom font icons -->
+    <link rel="stylesheet" href="https://file.myfontastic.com/6AeAYiqp5KBjSiZ2tE8WJW/icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- Slider -->
+    @*<link rel="stylesheet" href="css/slider.min.css">*@
+    <link href="~/Content/slider.min.css" rel="stylesheet" />
+    <!-- Lightbox Pop up -->
+    @*<link rel="stylesheet" href="css/lightbox.min.css">*@
+    <link href="~/Content/lightbox.min.css" rel="stylesheet" />
+    <!-- Datepicker -->
+    @*<link rel="stylesheet" href="css/datepicker.min.css">*@
+    <link href="~/Content/datepicker.min.css" rel="stylesheet" />
+    <!-- Datepicker -->
+    @*<link rel="stylesheet" href="css/timepicki.min.css">*@
+    <link href="~/Content/timepicki.min.css" rel="stylesheet" />
+    <!-- Owl Carousel -->
+    @*<link rel="stylesheet" href="css/owl.carousel.min.css">*@
+    <link href="~/Content/owl.carousel.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    @*<link rel="stylesheet" href="css/style.default.css">*@
+    <link href="~/Content/style.default.css" rel="stylesheet" />
+
+
+    <link href="~/Content/SyntaxHighlighter/shCore.css" rel="stylesheet" />
+    <link href="~/Content/SyntaxHighlighter/shThemeFadeToGrey.css" rel="stylesheet" />
+
+
+    <!-- Modernizr -->
+    @*<script type="text/javascript" src="js/modernizr.custom.79639.min.js"></script>*@
+    <script src="~/Scripts/modernizr.custom.79639.min.js"></script>
+
+</head>
+<body>
+
+    <div class="page-holder">
+        <!-- Navbar -->
+        <header class="header">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a href="index.html" class="navbar-brand"><img src="~/img/logo.jpg" alt="Italiano" width="110"></a>
+                        <div class="navbar-buttons">
+                            <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle navbar-btn">Menu<i class="fa fa-align-justify"></i></button>
+                        </div>
+                    </div>
+                    <div id="navigation" class="collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#hero">My Portfolio</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Skills</a></li>
+                            <li><a href="#gallery">My Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header><!-- End Navbar -->
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div id="slider" class="sl-slider-wrapper">
+
+                <div class="sl-slider">
+                    <!-- slide -->
+                    <div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                        <div class="sl-slide-inner" style="background-image: url(../../img/hero-bg.jpg);">
+                            <div class="container">
+                                <h2><span class="text-primary">Manpreet Kaur</span></h2>
+                                <p>Front-End Web-Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slide -->
+                    <div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                        <div class="sl-slide-inner" style="background-image: url(../../img/hero-bg02.jpg);">
+                            <div class="container">
+                                <h1>Determined & Focussed</h1>
+                                <p>Confident in my abilities to produce and while I prepare for the worst, I do the work necessary to tilt the odds that the best will happen.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slide -->
+                    <div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                        <div class="sl-slide-inner" style="background-image: url(../../img/hero-bg03.jpg);">
+                            <div class="container">
+                                <h2> <span class="text-primary">"One of the best programming skills you can have is knowing when to walk away for awhile." </span></h2>
+                                <p>- Oscar Godson</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End sl-slider -->
+                <!-- slider pagination -->
+                <nav id="nav-dots" class="nav-dots">
+                    <span class="nav-dot-current"></span>
+                    <span></span>
+                    <span></span>
+                </nav>
+
+                <!-- scroll down btn -->
+                <a id="scroll-down" href="#about" class="hidden-xs"></a>
+
+                <!-- social icons menu -->
+                <div class="social">
+                    <div class="wrapper">
+                        <ul class="list-unstyled">
+                            <li><a href="#" title="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" title="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" title="pinterest" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                        <span>Follow us on</span>
+                    </div>
+                </div>
+            </div><!-- End slider-wrapper -->
+        </section><!-- End Hero Section -->
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container text-center">
+                <header>
+                    <h2> A Bit About Me</h2>
+                    <h3>Check my story</h3>
+                </header>
+                <p class="lead">Young, attentive and a self-reliable person. Completed software developer Diploma from Manitoba Institute Of Trades And Technology. Good hands on Html, JavaScript and Css. Believes in learning from the mistakes. I am someone who is consistently growing myself and who takes the time to continue learning even though it's not a direct requirement of the job. I find that many times it's a combination of what you study both, directly and indirectly, related to work.</p>
+            </div>
+        </section>
+        <!-- End About Section -->
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container text-center">
+                <header>
+                    <h2>Skills & Achievements</h2>
+                    <h3>few of my good skills </h3>
+                </header>
+
+                <div class="row">
+                    <!-- item -->
+                    <div class="col-sm-4 service">
+                        <div class="icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="text">
+                            <h4>Html</h4>
+                            <p>Great experienxe with Html. Easily manage to design front-end webpages using Html.</p>
+                        </div>
+                    </div>
+
+                    <!-- item -->
+                    <div class="col-sm-3 service">
+                        <div class="icon">
+                            <i class="fab fa-css3"></i>
+                        </div>
+                        <div class="text">
+                            <h4>CSS</h4>
+                            <p>Hands on designing experience with great practice in making websites responsive on different screen sizes and providing an attractive nad pleasant look.</p>
+                        </div>
+                    </div>
+
+                    <!-- item -->
+                    <div class="col-sm-4 service">
+                        <div class="icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="text">
+                            <h4>JavaScript</h4>
+                            <p>First coding language I have learnt. Easy to program in JavaScript with various frameworks too.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Services Section -->
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="container text-center">
+                <header>
+                    <h2>My work</h2>
+                    <h3>Have a look at my projects....</h3>
+                </header>
+
+                <div class="gellery">
+                    <div class="row">
+                        <!-- Item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6 col-xs-6 col-custom-12">
+                            <div class="item">
+                                <img src="~/img/bg01-small.jpg" id="projects" alt="image" data-toggle="modal" data-target="#myModal">
+
+                                <div id="myModal" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content modal-lg">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h1 class="modal-title">JS Exercises</h1>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <ul id="dynamictab" class="nav nav-tabs">
+                                                    <li class="active"><a data-toggle="tab" href="#math">Math</a></li>
+                                                    <li><a data-toggle="tab" href="#palindrome">Palindrome</a></li>
+                                                    <li><a data-toggle="tab" href="#factorial">Factorial</a></li>
+                                                    <li><a data-toggle="tab" href="#fizzBuzz">Fizz Buzz</a></li>
+                                                </ul>
+
+                                                <div class="tab-content">
+                                                    <div id="math" class="tab-pane fade in active">
+                                                        <h2 style="font-size: 40px">Math</h2>
+                                                        <div class="row" style="color: darkblue">
+                                                            <div class="col-md-12">
+                                                                <p style="padding-bottom: 15px; color: black">
+                                                                    In this exercise you need to input 5 numbers and click the "calculate" button, this will result in the total sum, product, average, smallest number and largest number.
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="row">
+                                                                    <div class="col-md-3">Enter Number 1: </div>
+                                                                    <div class="col-md-3">
+                                                                        <input id="in1" type="number" />
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <p id="sum"></p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="row">
+                                                                    <div class="col-md-3">Enter Number 2: </div>
+                                                                    <div class="col-md-3">
+                                                                        <input id="in2" type="number" />
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <p id="product"></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="row">
+                                                                    <div class="col-md-3">Enter Number 3: </div>
+                                                                    <div class="col-md-3">
+                                                                        <input id="in3" type="number" />
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <p id="average"></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="row">
+                                                                    <div class="col-md-3">Enter Number 4: </div>
+                                                                    <div class="col-md-3">
+                                                                        <input id="in4" type="number" />
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <p id="smallest"></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="row">
+                                                                    <div class="col-md-3">Enter Number 5: </div>
+                                                                    <div class="col-md-3">
+                                                                        <input id="in5" type="number" />
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <p id="largest"></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row" style="padding-top: 15px">
+                                                            <div class="col-md-12">
+                                                                <button id="btnMath" type="button" class="btn btn-primary active">Calculate</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <button type="button" id="btnCodeMath" class="btn btn-primary active" style="margin-top: 10px">Show/Hide Code</button>
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="codeMath" class="row">
+                                                            <pre class="brush: js">
+                                                                $("#btnMath").click(function () {
+                                                                    var num1 = Number($("#in1").val());
+                                                                    var num2 = Number($("#in2").val());
+                                                                    var num3 = Number($("#in3").val());
+                                                                    var num4 = Number($("#in4").val());
+                                                                    var num5 = Number($("#in5").val());
+                                                                    var sum = num1 + num2 + num3 + num4 + num5;
+                                                                    var product = num1 * num2 * num3 * num4 * num5;
+                                                                    var average = (num1 + num2 + num3 + num4 + num5) / 5;
+                                                                    var largest = (Math.max(num1, num2, num3, num4, num5));
+                                                                    var smallest = (Math.min(num1, num2, num3, num4, num5))
+
+                                                                    $("#sum").text("The sum is: " + sum);
+                                                                    $("#product").text("The product is: " + product);
+                                                                    $("#average").text("The average is: " + average);
+                                                                    $("#largest").text("The largest number is : " + largest);
+                                                                    $("#smallest").text("The smallest number is: " + smallest)
+                                                                })
+                                                            </pre>
+                                                        </div>
+                                                    </div>
+                                                    <div id="palindrome" class="tab-pane fade">
+                                                        <h2 style="font-size: 40px; padding-bottom: 15px">Palindrome Finder</h2>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                Enter one Word
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <input id="word" />
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p id="result"></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <button type="button" class="btn btn-primary active" style="margin-top: 10px" id="findPalindrome">Check!</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <button type="button" id="btnPlndrm" class="btn btn-primary active" style="margin-top: 10px">Show/Hide Code</button>
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="plndrm" class="row">
+                                                            <pre class="brush: js">
+                                                                $("#findPalindrome").click(function () {
+                                                                var plWord = $("#word").val();
+                                                                var checkPalindrome = plWord.split('').reverse().join('');
+
+                                                                if (plWord === checkPalindrome) {
+                                                                $("#result").text('The word is palindrome.');
+                                                                } else {
+                                                                $("#result").text('The word is not palindrome!');
+                                                                }
+                                                                })
+
+                                                            </pre>
+                                                        </div>
+                                                    </div>
+                                                    <div id="factorial" class="tab-pane fade">
+                                                        <h2 style="font-size: 40px; padding-bottom: 15px">Factorial Calculator</h2>
+                                                        <div class="row">
+                                                            <div class="col-md-3">Enter a number</div>
+                                                            <div class="col-md-3">
+                                                                <input type="number" id="num" />
+                                                            </div>
+                                                            <div class="col-md-6" id="factor"></div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <button type="button" class="btn btn-primary active" style="margin-top: 10px" id="findFactrl">Calculate</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <button type="button" id="btnFctrl" class="btn btn-primary active" style="margin-top: 10px">Show/Hide Code</button>
+                                                            </div>
+                                                        </div>
+                                                        <div id="fctrlCode" class="row">
+                                                            <pre class="brush: js">
+                                                                $("#findFactrl").click(function () {
+                                                                    var numValue = $("#num").val();
+                                                                    initValue = 1;
+                                                                    for (i = numValue; i > 0; i--) {
+                                                                        initValue *= i
+                                                                    }
+                                                                    $("#factor").text("The factorial of " + numValue + " is " + initValue);
+
+                                                                })
+                                                              </pre>
+                                                        </div>
+
+                                                    </div>
+                                                    <div id="fizzBuzz" class="tab-pane fade">
+                                                        <h2 style="font-size: 40px; padding-bottom: 15px">Fizz Buzz</h2>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <input type="number" placeholder="Number 1" id="num1" />
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <input type="number" placeholder="Number 2" id="num2" />
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <p id="fizBuz"></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <button class="btn btn-primary active" style="margin-top: 10px" id="calculate">Calculate</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <button type="button" id="btnFizBuz" class="btn btn-primary active" style="margin-top: 10px">Show/Hide Code</button>
+                                                            </div>
+                                                        </div>
+                                                        <div id="fizBuzCode" class="row">
+                                                            <pre class="brush: js">
+                                                                $("#calculate").click(function () {
+                                                                    var start = $("#num1").val();
+                                                                    var finish = $("#num2").val();
+                                                                    $("#fizBuz").text(" ");
+
+                                                                    for (i = 1; i <= 100; i++) {
+                                                                        if (i % start === 0 && i % finish === 0) {
+                                                                            $("#fizBuz").append(" FizzBuzz, ");
+
+                                                                        }
+                                                                        else if (i % start === 0) {
+                                                                            $("#fizBuz").append(" Fizz, ");
+                                                                        }
+                                                                        else if (i % finish === 0) {
+                                                                            $("#fizBuz").append(" Buzz, ");
+                                                                        } else {
+                                                                            $("#fizBuz").append(" " + i + ",")
+                                                                        }
+                                                                    }
+                                                                    var str = $("#fizBuz").text();
+                                                                    str = str.substring(0, str.length - 2);
+                                                                    $("#fizBuz").text(str)
+
+                                                                })
+                                                              </pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <!-- Item -->
+
+                        <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                            <div class="item">
+                                <img src="~/img/bg02-small.jpg" id="projects" alt="image">
+                                @*<a href="~/img/bg02.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                                    <span class="icon-search"></span>
+                                </a>*@
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                            <div class="item">
+                                <img src="~/img/bg03-small.jpg" id="projects" alt="image">
+                                @*<a href="~/img/bg03.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                                    <span class="icon-search"></span>
+                                </a>*@
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                            <div class="item">
+                                <img src="~/img/bg04-small.jpg" id="projects" alt="image">
+                                @*<a href="~/img/bg.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                                    <span class="icon-search"></span>
+                                </a>*@
+                            </div>
+                        </div>
+                        <!-- Item -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Gallery Section -->
+        <section id="contact" class="contact">
+            <div id="map"></div>
+            <div class="container text-center">
+                <div class="form-holder">
+                    <header>
+                        <h2>Contact Us</h2>
+                        <h3>Feel free to contact us</h3>
+                    </header>
+
+                    <form method="get" action="#" id="contact-form">
+                        <div class="row">
+                            <label for="user-name" class="col-sm-6 unique">
+                                Name
+                                <input type="text" name="username" id="user-name" required>
+                            </label>
+                            <label for="user-email" class="col-sm-6 unique">
+                                Email
+                                <input type="email" name="useremail" id="user-email" required>
+                            </label>
+                            <label for="message" class="col-sm-12 unique">
+                                Your Message
+                                <textarea name="message" id="message" required></textarea>
+                            </label>
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn-unique" id="submit">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- End Booking Section -->
+        <!-- scroll top btn -->
+        <div id="scrollTop" class="btn-unique">
+            <i class="fa fa-angle-up"></i>
+        </div><!-- end scroll top btn -->
+        <!-- moadal booking form -->
+        <div class="reservation-overlay hidden-sm hidden-xs">
+            <section id="reservation-modal" class="reservation-modal">
+                <div id="close"><i class="icon-close"></i></div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="form-holder col-md-12 text-center">
+                            <h2>Make a reservation</h2>
+                            <h3>Book your table now</h3>
+
+                            <form id="booking-form-alternative" method="get" action="#">
+                                <div class="row">
+                                    <div class="col-md-push-1 col-sm-10">
+                                        <div class="row">
+                                            <label for="cname" class="col-sm-6 unique">
+                                                Name
+                                                <input name="clientname" type="text" id="cname" required>
+                                            </label>
+                                            <label for="cemail" class="col-sm-6 unique">
+                                                Email
+                                                <input name="clientemail" type="email" id="cemail" required>
+                                            </label>
+                                            <label for="cnumber" class="col-sm-6 unique">
+                                                Number
+                                                <input name="clientnumber" type="text" id="cnumber" required>
+                                            </label>
+                                            <label for="cpeople" class="col-sm-6 unique">
+                                                How Many People
+                                                <input name="clientpeople" type="number" id="cpeople" min="1" required>
+                                            </label>
+                                            <label for="cdate" class="col-sm-6 unique">
+                                                Date
+                                                <input name="clientdate" type="text" id="cdate" class="datepicker-here" data-language='en' required>
+                                            </label>
+                                            <label for="time-alt" class="col-sm-6 unique">
+                                                Time
+                                                <input name="clienttime" type="text" id="time-alt" class="timepicker" required>
+                                            </label>
+                                            <label for="request-alt" class="col-sm-12 unique">
+                                                Special Request
+                                                <textarea id="request-alt" name="clientrequest" required></textarea>
+                                            </label>
+                                            <div class="col-sm-12">
+                                                <button type="submit" class="btn-unique">Book Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div><!-- end modal booking form -->
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    @*<script src="js/bootstrap.min.js"></script>*@
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @*<script src="js/jquery.ba-cond.min.js"></script>*@
+
+
+    <script src="~/Scripts/jquery.ba-cond.min.js"></script>
+    <script src="~/Scripts/jquery.slitslider.min.js"></script>
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/lightbox.min.js"></script>
+    <script src="~/Scripts/datepicker.min.js"></script>
+    <script src="~/Scripts/datepicker.en.min.js"></script>
+    <script src="~/Scripts/timepicki.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/smooth.scroll.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0dSWcBx-VghzhzQB6oCMTgeXMOhCYTvk"></script>
+    <script src="~/Scripts/map.min.js"></script>
+    <script src="~/Scripts/script.js"></script>
+    <script src="~/Scripts/mathExercise.js"></script>
+
+    <script src="~/Scripts/SyntaxHighlighter/shCore.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+</body>
+</html>

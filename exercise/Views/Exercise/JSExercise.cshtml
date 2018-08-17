@@ -1,0 +1,172 @@
+﻿
+@{
+    ViewBag.Title = "JSExercise";
+}
+
+<h2>JS Exercise</h2>
+
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Exercises Goes Here!</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title">JS Exercises</h2>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#math">Math</a></li>
+                    <li><a data-toggle="tab" href="#palindrome">Palindrome</a></li>
+                    <li><a data-toggle="tab" href="#factorial">Factorial</a></li>
+                    <li><a data-toggle="tab" href="#fizzBuzz">Fizz Buzz</a></li>
+                </ul>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="tab-content">
+                    <div id="math" class="tab-pane fade in active">
+                        <h2 style="font-family: 'Oswald'; color: darkblue">Math</h2>
+                        <div class="row" style="color: darkblue">
+                            <div class="col-md-12" style="font-family: 'Oswald'">
+                                <h4>
+                                    In this exercise you need to input 5 numbers and click the "calculate" button, this will result in the total sum, product, average, smallest number and largest number.
+                                </h4>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3">Enter Number 1: </div>
+                                    <div class="col-md-3">
+                                        <input id="in1" type="number" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p id="sum"></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3">Enter Number 2: </div>
+                                    <div class="col-md-3">
+                                        <input id="in2" type="number" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p id="product"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3">Enter Number 3: </div>
+                                    <div class="col-md-3">
+                                        <input id="in3" type="number" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p id="average"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3">Enter Number 4: </div>
+                                    <div class="col-md-3">
+                                        <input id="in4" type="number" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p id="smallest"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3">Enter Number 5: </div>
+                                    <div class="col-md-3">
+                                        <input id="in5" type="number" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p id="largest"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button id="btnMath" type="button" class="btn btn-primary active">Calculate</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-primary active" style="margin-top: 10px">Show Code</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="palindrome" class="tab-pane fade">
+                        <h3>Palindrome Finder</h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                Enter one Word
+                            </div>
+                            <div class="col-md-3">
+                                <input id="word" />
+                            </div>
+                            <div class="col-md-6">
+                                <p id="result"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-primary" id="findPalindrome">Check!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="factorial" class="tab-pane fade">
+                        <h3>Factorial Calculator</h3>
+                        <div class="row">
+                            <div class="col-md-3">Enter a number</div>
+                            <div class="col-md-3">
+                                <input type="number" id="num" />
+                            </div>
+                            <div class="col-md-6" id="factor"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-primary" id="findFactrl">Calculate</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="fizzBuzz" class="tab-pane fade">
+                        <h3>Fizz Buzz</h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <input type="number" placeholder="Number 1" id="num1" />
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" placeholder="Number 2" id="num2" />
+                            </div>
+                            <div class="col-md-6">
+                                <p id="fizBuz"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-primary" id="calculate">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
