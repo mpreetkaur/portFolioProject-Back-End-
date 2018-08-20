@@ -8,13 +8,18 @@
     var product = num1 * num2 * num3 * num4 * num5;
     var average = (num1 + num2 + num3 + num4 + num5) / 5;
     var largest = (Math.max(num1, num2, num3, num4, num5));
-    var smallest = (Math.min(num1, num2, num3, num4, num5))
+    var smallest = (Math.min(num1, num2, num3, num4, num5));
 
     $("#sum").text("The sum is: " + sum);
     $("#product").text("The product is: " + product);
     $("#average").text("The average is: " + average);
     $("#largest").text("The largest number is : " + largest);
-    $("#smallest").text("The smallest number is: " + smallest)
+    $("#smallest").text("The smallest number is: " + smallest);
+    $("#in1").val("");
+    $("#in2").val("");
+    $("#in3").val("");
+    $("#in4").val("");
+    $("#in5").val("");
 })
 $("#codeMath").hide();
 $("#btnCodeMath").click(function () {
@@ -25,9 +30,9 @@ $("#findPalindrome").click(function () {
     var plWord = $("#word").val();
     var checkPalindrome = plWord.split('').reverse().join('');
 
-    if (plWord === checkPalindrome) {
+    if (plWord === checkPalindrome && plWord !== "") {
         $("#result").text('The word is palindrome.');
-    } else {
+    } else if (plWord !== "" && plWord !== checkPalindrome){
         $("#result").text('The word is not palindrome!');
     }
 })

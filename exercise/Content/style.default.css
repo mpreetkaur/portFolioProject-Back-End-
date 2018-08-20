@@ -1061,6 +1061,7 @@ section.gallery .item a:hover {
 }
 #projects:hover {
     opacity: 0.3;
+    cursor:pointer
 }
 section.gallery .item a span {
   color: #fff;
@@ -2283,4 +2284,10 @@ a.list-group-item.active > .badge,
 }
 .nav-pills > li > a > .badge {
   margin-left: 3px;
+}
+.gallery {
+    padding-top: 50px
+}
+.services{
+    padding-bottom: 40px
 }
