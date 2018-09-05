@@ -1,20 +1,28 @@
 ﻿$("#btnMath").click(function () {
-    var num1 = Number($("#in1").val());
-    var num2 = Number($("#in2").val());
-    var num3 = Number($("#in3").val());
-    var num4 = Number($("#in4").val());
-    var num5 = Number($("#in5").val());
-    var sum = num1 + num2 + num3 + num4 + num5;
-    var product = num1 * num2 * num3 * num4 * num5;
-    var average = (num1 + num2 + num3 + num4 + num5) / 5;
-    var largest = (Math.max(num1, num2, num3, num4, num5));
-    var smallest = (Math.min(num1, num2, num3, num4, num5));
+    if ($("#in1").val() != "" && $("#in2").val() != "" && $("#in3").val() != "" && $("#in4").val() != "" && $("#in5").val() != "") {
+        var num1 = Number($("#in1").val());
+        var num2 = Number($("#in2").val());
+        var num3 = Number($("#in3").val());
+        var num4 = Number($("#in4").val());
+        var num5 = Number($("#in5").val());
+        var sum = num1 + num2 + num3 + num4 + num5;
+        var product = num1 * num2 * num3 * num4 * num5;
+        var average = (num1 + num2 + num3 + num4 + num5) / 5;
+        var largest = (Math.max(num1, num2, num3, num4, num5));
+        var smallest = (Math.min(num1, num2, num3, num4, num5));
 
-    $("#sum").text("The sum is: " + sum);
-    $("#product").text("The product is: " + product);
-    $("#average").text("The average is: " + average);
-    $("#largest").text("The largest number is : " + largest);
-    $("#smallest").text("The smallest number is: " + smallest);
+        $("#sum").text("The sum is: " + sum);
+        $("#product").text("The product is: " + product);
+        $("#average").text("The average is: " + average);
+        $("#largest").text("The largest number is : " + largest);
+        $("#smallest").text("The smallest number is: " + smallest);
+    }else {
+        $("#sum").text("Please enter numeric values");
+        $("#product").text("");
+        $("#average").text("");
+        $("#largest").text("");
+        $("#smallest").text("");
+    }
     $("#in1").val("");
     $("#in2").val("");
     $("#in3").val("");
