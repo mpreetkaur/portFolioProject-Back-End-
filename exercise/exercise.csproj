@@ -230,6 +230,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="files\Manpreet  Resume.docx" />
+    <Content Include="files\resume.pdf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\datepicker.en.min.js" />
     <Content Include="Scripts\datepicker.min.js" />
@@ -249,7 +251,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\lightbox.min.js" />
     <Content Include="Scripts\map.min.js" />
-    <Content Include="Scripts\mathExercise.js" />
+    <Content Include="Scripts\exercise.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\modernizr.custom.79639.min.js" />
     <Content Include="Scripts\owl.carousel.min.js" />

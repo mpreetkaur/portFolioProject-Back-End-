@@ -40,9 +40,12 @@ $("#findPalindrome").click(function () {
 
     if (plWord === checkPalindrome && plWord !== "") {
         $("#result").text('The word is palindrome.');
-    } else if (plWord !== "" && plWord !== checkPalindrome){
+    } else if (plWord !== "" && plWord !== checkPalindrome) {
         $("#result").text('The word is not palindrome!');
+    } else{
+        $("#result").text('Please enter some word in input');
     }
+    $("#word").val("");
 })
 $("#plndrm").hide();
 $("#btnPlndrm").click(function () {
@@ -50,12 +53,17 @@ $("#btnPlndrm").click(function () {
 })
 
 $("#findFactrl").click(function () {
-    var numValue = $("#num").val();
-    initValue = 1;
-    for (i = numValue; i > 0; i--) {
-        initValue *= i
+    if ($("#num").val() !== "") {
+        var numValue = $("#num").val();
+        initValue = 1;
+        for (i = numValue; i > 0; i--) {
+            initValue *= i
+        }
+        $("#factor").text("The factorial of " + numValue + " is " + initValue);
+        $("#num").val("");
+    } else {
+        $("#factor").text("Please enter a number");
     }
-    $("#factor").text("The factorial of " + numValue + " is " + initValue);
 
 })
 $("#fctrlCode").hide();
@@ -64,27 +72,34 @@ $("#btnFctrl").click(function () {
 })
 
 $("#calculate").click(function () {
-    var start = $("#num1").val();
-    var finish = $("#num2").val();
-    $("#fizBuz").text(" ");
+    if ($("#num1").val() != "" && $("#num2").val() != "") {
+        var start = $("#num1").val();
+        var finish = $("#num2").val();
+        $("#fizBuz").text(" ");
 
-    for (i = 1; i <= 100; i++) {
-        if (i % start === 0 && i % finish === 0) {
-            $("#fizBuz").append(" FizzBuzz, ");
+        for (i = 1; i <= 100; i++) {
+            if (i % start === 0 && i % finish === 0) {
+                $("#fizBuz").append(" FizzBuzz, ");
 
+            }
+            else if (i % start === 0) {
+                $("#fizBuz").append(" Fizz, ");
+            }
+            else if (i % finish === 0) {
+                $("#fizBuz").append(" Buzz, ");
+            } else {
+                $("#fizBuz").append(" " + i + ",")
+            }
         }
-        else if (i % start === 0) {
-            $("#fizBuz").append(" Fizz, ");
-        }
-        else if (i % finish === 0) {
-            $("#fizBuz").append(" Buzz, ");
-        } else {
-            $("#fizBuz").append(" " + i + ",")
-        }
+        var str = $("#fizBuz").text();
+        str = str.substring(0, str.length - 2);
+        $("#fizBuz").text(str);
+
+        $("#num1").val("");
+        $("#num2").val("")
+    } else {
+        $("#fizBuz").text(" Please Enter Some numbers in the input")
     }
-    var str = $("#fizBuz").text();
-    str = str.substring(0, str.length - 2);
-    $("#fizBuz").text(str)
 
 })
 $("#fizBuzCode").hide();

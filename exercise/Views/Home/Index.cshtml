@@ -130,11 +130,9 @@
                 <div class="social">
                     <div class="wrapper">
                         <ul class="list-unstyled">
-                            <li><a href="#" title="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" title="twitter" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                            <li><a href="#" title="instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/manpreet-kaur-05481a157/" title="linkedIn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                         </ul>
-                        <span>Follow me on</span>
+                        <span>Check me on</span>
                     </div>
                 </div>
             </div><!-- End slider-wrapper -->
@@ -195,6 +193,18 @@
             </div>
         </section>
         <!-- End Services Section -->
+        <!-- App Section -->
+        <section id="app" class="app">
+            <div class="container text-center has-border">
+                <h5>My Resume</h5>
+                <ul class="list-unstyled list-inline">
+                    <li>
+                        <a href="~/files/resume.pdf" target="_blank" title="Google Play" class="btn-unique-white">Check Out Here!</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- End App Section -->
         <!-- Gallery Section -->
         <section id="gallery" class="gallery">
             <div class="container text-center">
@@ -369,16 +379,22 @@
                                                         <div id="plndrm" class="row">
                                                             <pre class="brush: js">
                                                                 $("#findPalindrome").click(function () {
-                                                                var plWord = $("#word").val();
-                                                                var checkPalindrome = plWord.split('').reverse().join('');
+                                                                    var plWord = $("#word").val();
+                                                                    var checkPalindrome = plWord.split('').reverse().join('');
 
-                                                                if (plWord === checkPalindrome) {
-                                                                $("#result").text('The word is palindrome.');
-                                                                } else {
-                                                                $("#result").text('The word is not palindrome!');
-                                                                }
+                                                                    if (plWord === checkPalindrome && plWord !== "") {
+                                                                        $("#result").text('The word is palindrome.');
+                                                                    } else if (plWord !== "" && plWord !== checkPalindrome) {
+                                                                        $("#result").text('The word is not palindrome!');
+                                                                    } else{
+                                                                        $("#result").text('Please enter some word in input');
+                                                                    }
+                                                                    $("#word").val("");
                                                                 })
-
+                                                                $("#plndrm").hide();
+                                                                $("#btnPlndrm").click(function () {
+                                                                    $("#plndrm").toggle();
+                                                                })  
                                                             </pre>
                                                         </div>
                                                     </div>
@@ -404,13 +420,21 @@
                                                         <div id="fctrlCode" class="row">
                                                             <pre class="brush: js">
                                                                 $("#findFactrl").click(function () {
-                                                                    var numValue = $("#num").val();
-                                                                    initValue = 1;
-                                                                    for (i = numValue; i > 0; i--) {
-                                                                        initValue *= i
-                                                                    }
-                                                                    $("#factor").text("The factorial of " + numValue + " is " + initValue);
-
+                                                                    if ($("#num").val() !== "") {
+                                                                        var numValue = $("#num").val();
+                                                                        initValue = 1;
+                                                                        for (i = numValue; i > 0; i--) {
+                                                                            initValue *= i
+                                                                        }
+                                                                        $("#factor").text("The factorial of " + numValue + " is " + initValue);
+                                                                        $("#num").val("");
+                                                                     } else {
+                                                                        $("#factor").text("Please enter a number");
+                                                                     }
+                                                                 })
+                                                                $("#fctrlCode").hide();
+                                                                $("#btnFctrl").click(function () {
+                                                                    $("#fctrlCode").toggle();
                                                                 })
                                                               </pre>
                                                         </div>
@@ -442,29 +466,42 @@
                                                         <div id="fizBuzCode" class="row">
                                                             <pre class="brush: js">
                                                                 $("#calculate").click(function () {
-                                                                    var start = $("#num1").val();
-                                                                    var finish = $("#num2").val();
-                                                                    $("#fizBuz").text(" ");
+                                                                    if ($("#num1").val() != "" && $("#num2").val() != "") {
+                                                                        var start = $("#num1").val();
+                                                                        var finish = $("#num2").val();
+                                                                        $("#fizBuz").text(" ");
 
-                                                                    for (i = 1; i <= 100; i++) {
-                                                                        if (i % start === 0 && i % finish === 0) {
-                                                                            $("#fizBuz").append(" FizzBuzz, ");
+                                                                        for (i = 1; i <= 100; i++) {
+                                                                            if (i % start === 0 && i % finish === 0) {
+                                                                                $("#fizBuz").append(" FizzBuzz, ");
 
+                                                                            }
+                                                                            else if (i % start === 0) {
+                                                                                $("#fizBuz").append(" Fizz, ");
+                                                                            }
+                                                                            else if (i % finish === 0) {
+                                                                                $("#fizBuz").append(" Buzz, ");
+                                                                                $("#fizBuz").append(" Buzz, ");
+                                                                            } else {
+                                                                                $("#fizBuz").append(" " + i + ",")
+                                                                            }
                                                                         }
-                                                                        else if (i % start === 0) {
-                                                                            $("#fizBuz").append(" Fizz, ");
-                                                                        }
-                                                                        else if (i % finish === 0) {
-                                                                            $("#fizBuz").append(" Buzz, ");
-                                                                        } else {
-                                                                            $("#fizBuz").append(" " + i + ",")
-                                                                        }
+                                                                        var str = $("#fizBuz").text();
+                                                                        str = str.substring(0, str.length - 2);
+                                                                        $("#fizBuz").text(str);
+
+                                                                        $("#num1").val("");
+                                                                        $("#num2").val("")
+                                                                    } else {
+                                                                        $("#fizBuz").text(" Please Enter Some numbers in the input")
                                                                     }
-                                                                    var str = $("#fizBuz").text();
-                                                                    str = str.substring(0, str.length - 2);
-                                                                    $("#fizBuz").text(str)
 
                                                                 })
+                                                                $("#fizBuzCode").hide();
+                                                                $("#btnFizBuz").click(function () {
+                                                                    $("#fizBuzCode").toggle();
+                                                                })
+
                                                               </pre>
                                                         </div>
                                                     </div>
@@ -483,6 +520,7 @@
 
 
 
+                            <h3>Blog</h3>
                         </div>
                         <!-- Item -->
 
@@ -490,27 +528,30 @@
                             <div class="item">
                                 <img src="~/img/bg02-small.jpg" id="projects" alt="image">
                                 @*<a href="~/img/bg02.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
-                                        <span class="icon-search"></span>
-                                    </a>*@
+                                    <span class="icon-search"></span>
+                                </a>*@
                             </div>
+                            <h3>Bug Tracking system</h3>
                         </div>
                         <!-- Item -->
                         <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
                             <div class="item">
                                 <img src="~/img/bg03-small.jpg" id="projects" alt="image">
                                 @*<a href="~/img/bg03.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
-                                        <span class="icon-search"></span>
-                                    </a>*@
+                                    <span class="icon-search"></span>
+                                </a>*@
                             </div>
+                            <h3>Financial Planner</h3>
                         </div>
                         <!-- Item -->
                         <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
                             <div class="item">
                                 <img src="~/img/bg04-small.jpg" id="projects" alt="image">
                                 @*<a href="~/img/bg.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
-                                        <span class="icon-search"></span>
-                                    </a>*@
+                                    <span class="icon-search"></span>
+                                </a>*@
                             </div>
+                            <h3>Financial Planner Web API</h3>
                         </div>
                         <!-- Item -->
                     </div>
@@ -576,7 +617,7 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0dSWcBx-VghzhzQB6oCMTgeXMOhCYTvk"></script>
     <script src="~/Scripts/map.min.js"></script>
     <script src="~/Scripts/script.js"></script>
-    <script src="~/Scripts/mathExercise.js"></script>
+    <script src="~/Scripts/exercise.js"></script>
 
     <script src="~/Scripts/SyntaxHighlighter/shCore.js"></script>
     <script src="~/Scripts/SyntaxHighlighter/shBrushJScript.js"></script>

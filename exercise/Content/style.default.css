@@ -2291,3 +2291,9 @@ a.list-group-item.active > .badge,
 .services{
     padding-bottom: 40px
 }
+
+@media (min-width: 768px){
+.modal-dialog {
+    width: 875px;
+}
+}
