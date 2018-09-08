@@ -16,7 +16,7 @@
         $("#average").text("The average is: " + average);
         $("#largest").text("The largest number is : " + largest);
         $("#smallest").text("The smallest number is: " + smallest);
-    }else {
+    } else {
         $("#sum").text("Please enter numeric values");
         $("#product").text("");
         $("#average").text("");
@@ -42,7 +42,7 @@ $("#findPalindrome").click(function () {
         $("#result").text('The word is palindrome.');
     } else if (plWord !== "" && plWord !== checkPalindrome) {
         $("#result").text('The word is not palindrome!');
-    } else{
+    } else {
         $("#result").text('Please enter some word in input');
     }
     $("#word").val("");
